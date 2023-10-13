@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter the bucket list:<input type="text" id="entervalue">
+    <button onclick="additem()">Add item</button>
+    <li id="div1"></li>
+    <script>
+        function additem(){
+            do{
+            let ap=document.getElementById("entervalue").value;
+            let list=document.getElementById("div1");
+            list.textContent=ap;}while(ap!=null);
+            
+
+        }
+    
+        
+        
+
+    </script>
+</body>
+</html>

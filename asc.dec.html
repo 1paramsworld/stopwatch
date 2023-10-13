@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asc_des</title>
+</head>
+<body>
+    <script>
+        let a=[1,2,3,4,5];
+        let b=[5,6,4,3,2,3,1];
+        let c=b.length-1;
+        for(let i=0;i<a.length;i++){
+            if(a[i]==b[c]){
+                console.log("Both the elements are same");
+                c=c-1;
+            }
+            else{
+
+                console.log("loop broke at "+i+" th syntax");
+                break
+            }
+        }
+        
+    </script>
+</body>
+</html>

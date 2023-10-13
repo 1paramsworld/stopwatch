@@ -1,0 +1,53 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter element:<input type="number" id="myvalue">
+    <button onclick="addel()">Add element</button>
+    <script>
+        function addel(){
+        let a=[1,2,3,4,5];
+        let myvalue1=document.getElementById("myvalue").value;
+        do{
+            a[a.length]=myvalue1;
+        }while(myvalue1!=null)
+
+        console.log(a);
+        
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Enter element:<input type="number" id="myvalue">
+    <button onclick="addel()">Add element</button>
+    <script>
+        function addel(){
+            let a=[1,2,3,4,5];
+            let myvalue1 = document.getElementById("myvalue").value;
+            
+            while (myvalue1 !== "") {
+                a[a.length]=myvalue1;
+                alert(a[5]);
+                console.log(a);
+            }
+            
+        }
+    </script>
+</body>
+</html>

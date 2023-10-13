@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>COUNT-DOWN TIMER</h1>
+    <p id="text"></p>
+    <script>
+        const targetdate=new Date(2023,8,30,18,0,0);
+        function updatecount(){
+
+                const currentdate=new Date();
+                const timedifference=targetdate.getTime()-currentdate.getTime();
+
+                if(timedifference>0){
+                    const days=Math.floor(timedifference/(1000*60*24*24));
+                    const hours=Math.floor((timedifference%(1000*60*60*24))/(1000*60*60));
+                    const minutes=Math.floor((timedifference%(1000*60*60))/(1000*60));
+                    const seconds=Math.floor((timedifference%(1000*60))/1000);
+
+                    document.getElementById("text").innerHTML=`Time Left: ${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+
+
+                }
+                else{
+                    document.getElementById("countdown").innerHTML = "Countdown expired!";
+
+                }
+        }
+        setInterval(updatecount,1000);
+        updatecount();
+
+    </script>
+</body>
+</html> 
+

@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function findprime(numb) {
+            let count=0;
+         for(let i=1;i<numb;i++){
+            if(numb%i==0 && numb!=2){
+
+                // console.log("not a prime number");
+                count=count+1;
+                if(count == 2 )
+                {
+                    console.log("not prime")
+                    break
+                }
+            }
+            else{
+                if(i==numb-1 && count == 1)
+                {
+                    console.log("prime")
+                    break
+                }
+            }
+            
+         }
+        //  if(count==2){
+        //     console.log("prime number");
+        //  } 
+        //  else{
+        //     console.log("not a prime number");
+        //  } 
+        }
+        let param=3;
+        let b=findprime(param);
+    
+    </script>
+</body>
+</html>
