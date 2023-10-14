@@ -6,7 +6,7 @@
     <title>Document</title>
     <style>
         body{
-            background-color: antiquewhite;
+            background-color: rgb(0, 0, 0);
         }
         .stopwatch{
             width: 90%;
@@ -20,6 +20,7 @@
             margin: 200px auto 0;
             box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
             font-family: 'Courier New', Courier, monospace;
+            
         }
         .stopwatch h1{
             margin-top: 60px;
@@ -49,6 +50,7 @@
     </div>
     <script>
         let [seconds,minutes,hours]=[0,0,0];
+        console.log(typeof seconds);
         let displayTime=document.getElementById("displayTime");
         let timer=null;
 
@@ -62,19 +64,19 @@
                     hours++;
                 }
             }
-            let h=hours<10?"0"+hours:hours;
-            let m=minutes<10?"0"+minutes:minutes;
-            let s=seconds<10?"0"+seconds:seconds;
+            // let h=hours<10?"0"+hours:hours;
+            // let m=minutes<10?"0"+minutes:minutes;
+            // let s=seconds<10?"0"+seconds:seconds;
 
 
 
-            displayTime.innerHTML=h+":"+m+":"+s;
+            displayTime.innerHTML=hours+":"+minutes+":"+seconds;
         }
 
         function watchstart(){
-            if(timer!=null){
-                clearInterval(timer);
-            }
+            // if(timer!=null){
+            //     clearInterval(timer);
+            // }
             timer=setInterval(stopwatch,1000);
         }
 
